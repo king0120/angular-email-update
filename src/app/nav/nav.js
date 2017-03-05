@@ -1,4 +1,3 @@
 export const nav = {
-  template: require('./nav.html'),
-  controller() {}
+  template: require('./nav.html')
 };

@@ -31,7 +31,8 @@ input.form-control {
   word-break: break-word;
   border-radius: 0;
   padding: 1em 2em;
-  width: 20%;
+  min-width: 250px;
+  width: 20vw;
   transition: all .25s;
   &:focus {
     outline: none;

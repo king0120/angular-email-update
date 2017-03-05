@@ -1,5 +1,6 @@
 .email-container {
   color: white;
+  height: 100vh;
   img {
     padding: 0;
     border: 2px solid black;
@@ -17,7 +18,9 @@
 
 .profile {
   margin: auto;
-  height: 50vh;
+  min-height: 50vh;
+  max-height: 75vh;
+  height: 100%;
   background-image: url("http://www.southerncompany.com/content/dam/southern-company/promobackgrounds/bg_red-supergraphic.jpg");
   background-size: cover;
   border-radius: 3px;
