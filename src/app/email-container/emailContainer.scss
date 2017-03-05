@@ -1,15 +1,45 @@
-.email-container{
-  background-color: #ffa;
+.email-container {
+  color: white;
+  img {
+    padding: 0;
+    border: 2px solid black;
+  }
+  h2 {
+    font-family: 'serif';
+    font-size: 3rem;
+    margin: 20px 0;
+  }
+  .info{
+    margin: 5px;
+    font-size: 1.8rem;
+  }
 }
 
-.form-control{
+.profile {
+  margin: auto;
+  height: 50vh;
+  background-image: url("http://www.southerncompany.com/content/dam/southern-company/promobackgrounds/bg_red-supergraphic.jpg");
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.375);
+}
+
+.form-control {
   border: none;
   box-shadow: none;
   border-radius: 0;
   transition: border-bottom .5s;
   border-bottom: 2px solid $SoCoBlue;
-  &:focus{
+  &:focus {
     transition: border-bottom .5s;
     border-bottom: 2px solid lighten($SoCoBlue, 50%);
   }
+}
+
+.flex-center{
+  height: inherit;
+  margin: 10px 5px 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

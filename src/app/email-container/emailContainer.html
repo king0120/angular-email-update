@@ -1,19 +1,48 @@
 <nav></nav>
-<div class="container">
+<div class="container email-container" ng-cloak>
   <div class="col-md-2"></div>
-  <div class="col-md-8">
-    <div class="email-container">
-      {{ $ctrl.hello }}
+  <div class="col-md-8 profile">
+    <div class="row">
+      <div class="col-md-4 flex-center">
+        <img src="{{$ctrl.user.picture.large}}" alt="{{$ctrl.user.name.first}} {{$ctrl.user.name.last}}">
+      </div>
+      <div class="col-md-7">
+        <h2>
+          Welcome back {{$ctrl.user.name.first | capitalize}} {{$ctrl.user.name.last | capitalize}}!
+        </h2>
+        <div>
+          <div class="info"> Cell: {{$ctrl.user.cell}} </div>
+          <div class="info"> Email: {{$ctrl.user.email}} </div>
+          <div class="info"> Location: {{$ctrl.user.location.city | capitalize}}, {{$ctrl.user.location.state | capitalize}} </div>
+          <div class="info"> Gender: {{$ctrl.user.gender | capitalize}} </div>
+        </div>
+      </div>
     </div>
-    <form action="">
-      <div class="form-group">
-        <input type="email" class="form-control" placeholder="Enter email" />
-        <button type="button" class="btn btn-success">
+
+    <div>
+      Previous E-mail Addresses:
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"         data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+      <form ng-submit="$ctrl.editEmail()">
+        <div class="form-group">
+          Add a new e-mail address
+          <input type="email" class="form-control" placeholder="Enter email" ng-model="$ctrl.newEmail" />
+          <button type="button" class="btn btn-success">
           Submit
           <i class="glyphicon glyphicon-arrow-right"></i>
         </button>
-      </div>
-    </form>
+        </div>
+      </form>
+    </div>
   </div>
   <div class="col-md-2"></div>
 </div>
