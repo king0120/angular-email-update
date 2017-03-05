@@ -1,0 +1,15 @@
+.email-container{
+  background-color: #ffa;
+}
+
+.form-control{
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  transition: border-bottom .5s;
+  border-bottom: 2px solid $SoCoBlue;
+  &:focus{
+    transition: border-bottom .5s;
+    border-bottom: 2px solid lighten($SoCoBlue, 50%);
+  }
+}
