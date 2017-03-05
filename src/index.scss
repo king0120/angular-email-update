@@ -3,21 +3,9 @@ $SoCoBlue: #00BCF1;
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap";
 @import "./app/email-container/emailContainer.scss";
+@import "./app/email-update/emailUpdate.scss";
 @import "./app/nav/nav.scss";
+
 body{
   color: #4D4D4D;
-}
-
-.btn.btn-success{
-    background-color: #ffffff;
-    color: #EC1C24;
-    font-size: 1.2em;
-    line-height: 1;
-    text-transform: lowercase;
-    border: 2px solid currentColor;
-    white-space: normal;
-    word-break: break-word;
-    border-radius: 0;
-    padding: 1em 2em;
-    width: 100%;
 }

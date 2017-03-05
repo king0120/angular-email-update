@@ -1,0 +1,15 @@
+<div>
+  <h3>Update Your E-Mail Address</h3>
+  <form ng-submit="$ctrl.submit()">
+    <select ng-model="$ctrl.selected" ng-change="$ctrl.updateFromPrevEmail()">
+          <option value="">- Choose A Previous E-mail -</option>
+          <option ng-repeat="email in $ctrl.emails" value="{{email}}">{{email}}</option>
+        </select>
+    <div class="or">Or</div>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Add a new e-mail" ng-model="$ctrl.newEmail" />
+      <input type="submit" class="btn btn-submit" />
+    </div>
+    <div class="invalid" ng-if="$ctrl.invalid">{{$ctrl.invalid}}</div>
+  </form>
+</div>

@@ -1,6 +1,7 @@
 import angular from 'angular';
-import $ from 'jquery';
+import angularUiBootstrap from 'angular-ui-bootstrap';
 import {emailContainer} from './app/email-container/emailContainer';
+import {emailUpdate} from './app/email-update/emailUpdate';
 import {nav} from './app/nav/nav';
 import {User} from './app/user.service';
 
@@ -11,12 +12,15 @@ import './index.scss';
 export const app = 'app';
 
 angular
-  .module(app, [])
+  .module(app, [
+    angularUiBootstrap
+  ])
   .component('app', emailContainer)
+  .component('update', emailUpdate)
   .component('nav', nav)
   .service('User', User)
   .filter('capitalize', () => {
     return token => {
-      return token.charAt(0).toUpperCase() + token.slice(1);
+      return token ? token.charAt(0).toUpperCase() + token.slice(1) : '';
     };
   });

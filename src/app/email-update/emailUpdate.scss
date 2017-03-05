@@ -1,0 +1,50 @@
+select,
+input.form-control {
+  background: rgba(0, 0, 0, 0.35);
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 5px solid $SoCoBlue;
+  color: white;
+  &:focus {
+    outline: none;
+  }
+}
+
+.or {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.btn.btn-submit {
+  margin-top: 10px;
+  background-color: #ffffff;
+  float: right;
+  color: #EC1C24;
+  font-size: 1.2em;
+  line-height: 1;
+  text-transform: lowercase;
+  border: 2px solid currentColor;
+  white-space: normal;
+  word-break: break-word;
+  border-radius: 0;
+  padding: 1em 2em;
+  width: 20%;
+  transition: all .25s;
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    transition: all .25s;
+    transform: scale(.95, .95);
+    background-color: darken(#ffffff, .25);
+  }
+}
+
+
+.invalid{
+  font-size: 1.6rem;
+  color: #fff;
+}
